@@ -63,7 +63,7 @@ CREATE TABLE [dbo].[Trips] (
   [vehicle_id] int  NOT NULL,
   [driver_id] int  NOT NULL,
   [route_id] int  NOT NULL,
-  [depatrute_date] datetime2 DEFAULT GETDATE() NOT NULL,
+  [departure_date] datetime2 DEFAULT GETDATE() NOT NULL,
   PRIMARY KEY CLUSTERED ([trip_id])
 WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
 )
@@ -71,7 +71,7 @@ GO
 CREATE NONCLUSTERED INDEX [idx_vehicle_with_date]
 ON [dbo].[Trips] (
   [vehicle_id] ASC,
-  [depatrute_date] ASC
+  [departure_date] ASC
 )
 GO
 CREATE NONCLUSTERED INDEX [idx_driver_id]
