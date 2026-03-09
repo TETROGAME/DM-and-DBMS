@@ -2,7 +2,7 @@
 
 -- Выбираем ФИО водителя, дату отправки и название транспортного средства для всех рейсов за последние 12 недель
 -- Сортируем по убыванию даты
-SELECT d.name + ' ' + d.surname + ' ' + d.patronymic AS FIO,
+SELECT CONCAT(d.name, ' ', d.surname, ' ', d.patronymic) AS FIO,
        FORMAT(t.departure_date, 'dd.MM.yyyy')        as departure_date,
        vt.type_name
 FROM Trips AS t
