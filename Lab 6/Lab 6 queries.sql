@@ -56,7 +56,7 @@ HAVING CAST(ROUND(AVG(cr.grade * 1.0), 1) AS FLOAT) >= 4.3
 -- Добавим в 6 семестр студента на основе другого без отчества и с самым последним id зачетки
 INSERT INTO Student
 SELECT TOP(1)
-    s.record_book_id + 1,
+    (SELECT MAX(s2.record_book_id) FROM Student AS s2) + 1,
     s.name,
     s.surname,
     'Insertovich',
