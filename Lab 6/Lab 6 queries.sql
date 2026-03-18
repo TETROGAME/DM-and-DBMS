@@ -166,3 +166,14 @@ CREATE VIEW Student_w_GPA_and_exam_count AS
     FROM Student AS stud
     JOIN Certification_result AS cr ON cr.record_book_id = stud.record_book_id
     GROUP BY stud.name, stud.surname, stud.patronymic, stud.record_book_id
+
+--14.
+
+-- 5 студентов с самым высоким средним баллом
+SELECT TOP(5) s.name,
+              s.surname,
+              CAST(ROUND(AVG(cr.grade * 1.0), 1) AS FLOAT) AS GPA
+FROM Student AS s
+JOIN Certification_result AS cr ON cr.record_book_id = s.record_book_id
+GROUP BY s.name, s.surname
+ORDER BY CAST(ROUND(AVG(cr.grade * 1.0), 1) AS FLOAT) DESC

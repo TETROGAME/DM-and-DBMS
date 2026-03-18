@@ -143,3 +143,13 @@ CREATE VIEW Drivers_w_vehicles_they_drove_view AS
     JOIN Drivers AS d ON t.driver_id = d.driver_id
     JOIN Vehicles AS v ON t.vehicle_id = v.vehicle_id
     JOIN Vehicle_types AS vt ON v.type_id = vt.type_id
+
+-- 14.
+
+-- Имя, фамилия, число поездок
+SELECT d.name,
+       d.surname,
+       COUNT(*) AS trips_completed
+FROM Drivers AS d
+JOIN Trips AS t ON t.driver_id = d.driver_id
+GROUP BY d.name, d.surname
