@@ -2,28 +2,28 @@
 -- 1. Заполнение справочника [Product_groups] (30 категорий)
 -- =========================================================================
 INSERT INTO [dbo].[Product_groups] ([group_name]) VALUES
-                                                      ('Beverages'), ('Dairy & Eggs'), ('Fresh Produce'), ('Meat & Poultry'), ('Seafood'),
-                                                      ('Bakery'), ('Frozen Foods'), ('Snacks & Candy'), ('Canned Goods'), ('Condiments & Sauces'),
-                                                      ('Breakfast & Cereal'), ('Pasta & Grains'), ('Baking Supplies'), ('Spices & Herbs'), ('Deli'),
-                                                      ('Coffee & Tea'), ('Baby Food & Care'), ('Pet Supplies'), ('Household Cleaning'), ('Laundry Supplies'),
-                                                      ('Paper Products'), ('Personal Care'), ('Health & Medicine'), ('Beauty & Cosmetics'), ('Office & School'),
-                                                      ('Home Appliances'), ('Electronics'), ('Tools & Hardware'), ('Garden & Outdoor'), ('Automotive');
+    ('Beverages'), ('Dairy & Eggs'), ('Fresh Produce'), ('Meat & Poultry'), ('Seafood'),
+    ('Bakery'), ('Frozen Foods'), ('Snacks & Candy'), ('Canned Goods'), ('Condiments & Sauces'),
+    ('Breakfast & Cereal'), ('Pasta & Grains'), ('Baking Supplies'), ('Spices & Herbs'), ('Deli'),
+    ('Coffee & Tea'), ('Baby Food & Care'), ('Pet Supplies'), ('Household Cleaning'), ('Laundry Supplies'),
+    ('Paper Products'), ('Personal Care'), ('Health & Medicine'), ('Beauty & Cosmetics'), ('Office & School'),
+    ('Home Appliances'), ('Electronics'), ('Tools & Hardware'), ('Garden & Outdoor'), ('Automotive');
 GO
 
 -- =========================================================================
 -- 2. Заполнение справочника [Stores] (50 магазинов)
 -- =========================================================================
 INSERT INTO [dbo].[Stores] ([store_name]) VALUES
-                                              ('Central Market - Downtown'), ('Central Market - Uptown'), ('Westside Superstore'), ('East End Groceries'), ('North District Mart'),
-                                              ('South Park Express'), ('Metro Station Grocery'), ('Lakeside Supermarket'), ('Hilltop Fresh Food'), ('Valley Discount Store'),
-                                              ('Riverfront Market'), ('Highland Foods'), ('Sunset Boulevard Mart'), ('Oceanview Grocery'), ('Pioneer Square Shop'),
-                                              ('Harbor Retail & Food'), ('Forest Green Supermarket'), ('Silver Lake Groceries'), ('Golden Gate Market'), ('City Center Express'),
-                                              ('Maple Street Mart'), ('Oak Avenue Groceries'), ('Pine Road Superstore'), ('Cedar Lane Market'), ('Elm Street Express'),
-                                              ('Washington Blvd Foods'), ('Lincoln Park Supermarket'), ('Jefferson Square Mart'), ('Adams Way Groceries'), ('Franklin Ave Market'),
-                                              ('Grand Central Foods'), ('Union Station Groceries'), ('Liberty Bell Mart'), ('Victory Square Express'), ('Independence Superstore'),
-                                              ('Main Street Grocers'), ('Broadway Food Market'), ('Park Avenue Fresh'), ('5th Avenue Express'), ('Lexington Supermarket'),
-                                              ('Springfield Mart'), ('Riverside Discount'), ('Brookside Fresh Market'), ('Meadow Market'), ('Woodland Groceries'),
-                                              ('Stone Creek Superstore'), ('Clearwater Express'), ('Blue Ridge Foods'), ('Rocky Mountain Mart'), ('Desert Springs Grocer');
+    ('Central Market - Downtown'), ('Central Market - Uptown'), ('Westside Superstore'), ('East End Groceries'), ('North District Mart'),
+    ('South Park Express'), ('Metro Station Grocery'), ('Lakeside Supermarket'), ('Hilltop Fresh Food'), ('Valley Discount Store'),
+    ('Riverfront Market'), ('Highland Foods'), ('Sunset Boulevard Mart'), ('Oceanview Grocery'), ('Pioneer Square Shop'),
+    ('Harbor Retail & Food'), ('Forest Green Supermarket'), ('Silver Lake Groceries'), ('Golden Gate Market'), ('City Center Express'),
+    ('Maple Street Mart'), ('Oak Avenue Groceries'), ('Pine Road Superstore'), ('Cedar Lane Market'), ('Elm Street Express'),
+    ('Washington Blvd Foods'), ('Lincoln Park Supermarket'), ('Jefferson Square Mart'), ('Adams Way Groceries'), ('Franklin Ave Market'),
+    ('Grand Central Foods'), ('Union Station Groceries'), ('Liberty Bell Mart'), ('Victory Square Express'), ('Independence Superstore'),
+    ('Main Street Grocers'), ('Broadway Food Market'), ('Park Avenue Fresh'), ('5th Avenue Express'), ('Lexington Supermarket'),
+    ('Springfield Mart'), ('Riverside Discount'), ('Brookside Fresh Market'), ('Meadow Market'), ('Woodland Groceries'),
+    ('Stone Creek Superstore'), ('Clearwater Express'), ('Blue Ridge Foods'), ('Rocky Mountain Mart'), ('Desert Springs Grocer');
 GO
 
 -- =========================================================================
