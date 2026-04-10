@@ -59,7 +59,7 @@ FROM (
 SELECT 1 AS sort_order, * FROM ReportData
 UNION ALL
 SELECT 2 AS sort_order,
-    N'Результат',
+    N'Итого',
        SUM([Остаток_на_начало]),
        SUM([Приход]),
        SUM([Расход]),
