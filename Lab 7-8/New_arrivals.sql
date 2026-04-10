@@ -59,3 +59,36 @@ WHILE @Counter <= 800
 
 PRINT N'Генерация успешно завершена!';
 GO
+
+
+-- Еще более новые поставки
+SET NOCOUNT ON;
+
+DECLARE @i INT = 1;
+DECLARE @RandomReceiptId INT;
+
+PRINT N'Завозим нормальный ассортимент во все магазины...';
+
+WHILE @i <= 500
+    BEGIN
+        -- Случайная дата за последний год и случайный магазин от 1 до 50
+        INSERT INTO [dbo].[Receipts] ([receipt_date], [store_id])
+        VALUES (
+                   DATEADD(day, -(ABS(CHECKSUM(NEWID())) % 365), '2025-07-02T00:00:00'),
+                   (ABS(CHECKSUM(NEWID())) % 50) + 1
+               );
+
+        SET @RandomReceiptId = SCOPE_IDENTITY();
+
+        -- Добавляем 3 абсолютно случайных товара (от 1 до 100) со случайным количеством (от 10 до 60)
+        INSERT INTO [dbo].[Receipt_lines] ([receipt_id], [product_id], [quantity])
+        VALUES
+            (@RandomReceiptId, (ABS(CHECKSUM(NEWID())) % 100) + 1, (ABS(CHECKSUM(NEWID())) % 50) + 10),
+            (@RandomReceiptId, (ABS(CHECKSUM(NEWID())) % 100) + 1, (ABS(CHECKSUM(NEWID())) % 50) + 10),
+            (@RandomReceiptId, (ABS(CHECKSUM(NEWID())) % 100) + 1, (ABS(CHECKSUM(NEWID())) % 50) + 10);
+
+        SET @i = @i + 1;
+    END;
+
+PRINT N'Успешно! Теперь в магазинах есть всё.';
+GO
